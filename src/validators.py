@@ -16,13 +16,13 @@ def _calcular_digito_verificador(digitos: str, peso_inicial: int) -> int:
     return 0 if resto == 10 else resto
 
 
-def validar_cpf(cpf: str | None) -> bool
+def validar_cpf(cpf: str | None) -> bool:
     if not isinstance(cpf, str):
         return False
 
     apenas_digitos = re.sub(r"[.\-\s]", "", cpf)
 
-    if len(apenas_digitos) != 11 or not apenas_digitos.isdigit()
+    if len(apenas_digitos) != 11 or not apenas_digitos.isdigit():
         return False
 
     if len(set(apenas_digitos)) == 1:
