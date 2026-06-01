@@ -22,7 +22,7 @@ def validar_cpf(cpf: str | None) -> bool
 
     apenas_digitos = re.sub(r"[.\-\s]", "", cpf)
 
-    if len(apenas_digitos) != 11 or not apenas_digitos.isdigit():
+    if len(apenas_digitos) != 11 or not apenas_digitos.isdigit()
         return False
 
     if len(set(apenas_digitos)) == 1:
